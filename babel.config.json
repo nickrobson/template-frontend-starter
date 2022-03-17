@@ -1,0 +1,3 @@
+{
+  "plugins": ["@compiled/babel-plugin"]
+}

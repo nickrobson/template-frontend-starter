@@ -3,7 +3,7 @@
   "transformers": {
     "*.{js,jsx,ts,tsx}": [
       "@compiled/parcel-transformer",
-      "@parcel/transformer-js"
+      "..."
     ]
   },
   "validators": {
