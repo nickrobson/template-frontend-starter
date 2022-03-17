@@ -3,7 +3,6 @@
   "transformers": {
     "*.{js,jsx,ts,tsx}": [
       "@compiled/parcel-transformer",
-      "@parcel/transformer-babel",
       "@parcel/transformer-js"
     ]
   },

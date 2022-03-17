@@ -7,7 +7,7 @@
     "lib": ["DOM", "ES2019"],
     "jsx": "react-jsx",
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDirs": ["./src"],
     "moduleResolution": "node",
 
     "declaration": true,

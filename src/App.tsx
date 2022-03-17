@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@compiled/react';
 
 const StyledH1 = styled.h1`
