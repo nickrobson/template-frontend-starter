@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "template-frontend-starter",
+  "version": "1.0.0",
+  "description": "A template for quickly bootstrapping frontends",
+  "main": "index.js",
+  "author": "Nick Robson",
+  "license": "MIT",
+  "browserslist": "> 1%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@compiled/react": "^0.10.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {
+    "@compiled/parcel-transformer": "^0.7.3",
+    "@parcel/validator-typescript": "^2.3.2",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.6",
+    "parcel": "^2.3.2",
+    "prettier": "2.6.0",
+    "typescript": "^4.6.2"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "composite": true,
+
+    "target": "es2019",
+    "lib": ["DOM", "ES2019"],
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "~*": ["./*"]
+    },
+
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true
+  }
+}
