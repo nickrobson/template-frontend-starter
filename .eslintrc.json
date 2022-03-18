@@ -16,6 +16,7 @@
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:@compiled/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -33,12 +34,12 @@
     "jsx-a11y",
     "react",
     "react-hooks",
+    "@compiled",
     "@typescript-eslint"
   ],
   "settings": {
     "react": {
       "version": "detect"
     }
-  },
-  "rules": {}
+  }
 }

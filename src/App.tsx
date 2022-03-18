@@ -1,8 +1,8 @@
 import { styled } from '@compiled/react';
 
-const StyledH1 = styled.h1`
-  color: #333;
-`;
+const StyledH1 = styled.h1({
+  color: '#333',
+});
 
 export const App = () => {
   return (

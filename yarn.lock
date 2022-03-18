@@ -849,7 +849,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.16.7"
     "@babel/helper-plugin-utils" "^7.16.7"
 
-"@babel/preset-env@^7.16.11", "@babel/preset-env@^7.4.0":
+"@babel/preset-env@^7.16.11":
   version "7.16.11"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.16.11.tgz#5dd88fd885fae36f88fd7c8342475c9f0abe2982"
   integrity sha512-qcmWG8R7ZW6WBRPZK//y+E3Cli151B20W1Rv7ln27vuPaXU/8TKms6jFdiJtF7UDTxcrb7mZd88tAeK9LjdT8g==
@@ -1047,6 +1047,11 @@
     postcss-normalize-whitespace "^5.1.0"
     postcss-selector-parser "^6.0.9"
     postcss-values-parser "^6.0.2"
+
+"@compiled/eslint-plugin@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@compiled/eslint-plugin/-/eslint-plugin-0.3.0.tgz#491db11c1f5bb16af4097779db3340d70f367fad"
+  integrity sha512-KJBnrtnK7ynOESvzuvRudNIZnExsV4f4Nz9argEBdLlSXjoJwwoHomSKSO7eo4gP0i61/PNJyevfx6LUArAV8Q==
 
 "@compiled/parcel-transformer@^0.7.3":
   version "0.7.3"
@@ -1351,14 +1356,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@parcel/babel-preset-env@^2.3.2":
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/@parcel/babel-preset-env/-/babel-preset-env-2.3.2.tgz#c0ac87b22781cbf65b624131bb95a3bcaecf2df1"
-  integrity sha512-iqUWOUcncUjs/6mxr+DDYfNQLGN4V4+R0Rkbh1BAX3gYW2oidUDmxV0EgHLEIMO7prrrXqjfb4EFh/ZYOCIG1Q==
-  dependencies:
-    "@babel/preset-env" "^7.4.0"
-    semver "^5.7.1"
 
 "@parcel/bundler-default@2.3.2":
   version "2.3.2"
