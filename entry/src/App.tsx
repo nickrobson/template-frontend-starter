@@ -1,14 +1,10 @@
-import { styled } from '@compiled/react';
-
-const StyledH1 = styled.h1({
-  color: '#333',
-});
+import { Heading } from '@template-frontend-starter/core';
 
 export const App = () => {
   return (
     <>
       <header>
-        <StyledH1>template-frontend-starter</StyledH1>
+        <Heading size={1}>template-frontend-starter</Heading>
       </header>
       <main>
         <p>

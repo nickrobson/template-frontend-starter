@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@template-frontend-starter/entry",
+  "version": "1.0.0",
+  "dependencies": {
+    "@template-frontend-starter/core": "workspace:*",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^12.1.4"
+  }
+}

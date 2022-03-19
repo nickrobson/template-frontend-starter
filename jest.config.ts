@@ -15,7 +15,7 @@ export default {
 
   collectCoverage: true,
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/{entry,packages}/**/*.{js,jsx,ts,tsx}',
     '!**/node_modules/**',
   ],
   coverageDirectory: 'coverage',
@@ -28,8 +28,8 @@ export default {
       setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
       testEnvironment: 'jsdom',
       testMatch: [
-        '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
-        '<rootDir>/src/**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
+        '<rootDir>/{entry,packages}/**/__tests__/**/*.{js,jsx,ts,tsx}',
+        '<rootDir>/{entry,packages}/**/?(*.)+(spec|test).{js,jsx,ts,tsx}',
       ],
 
       transform: {
@@ -39,7 +39,7 @@ export default {
     {
       displayName: 'lint',
       runner: 'eslint',
-      testMatch: ['<rootDir>/src/**/*.{js,jsx,ts,tsx}'],
+      testMatch: ['<rootDir>/{entry,packages}/**/*.{js,jsx,ts,tsx}'],
     },
   ],
 };

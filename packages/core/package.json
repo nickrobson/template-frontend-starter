@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "@template-frontend-starter/core",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@compiled/react": "^0.10.4",
+    "react": "^17.0.2"
+  }
+}

@@ -1460,20 +1460,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@compiled/parcel-transformer@npm:^0.7.3":
-  version: 0.7.3
-  resolution: "@compiled/parcel-transformer@npm:0.7.3"
-  dependencies:
-    "@babel/core": ^7.17.5
-    "@babel/generator": ^7.17.3
-    "@compiled/babel-plugin": ^0.14.0
-    "@compiled/utils": ^0.6.16
-    "@parcel/plugin": ^2.3.2
-    "@parcel/source-map": ^2.0.2
-  checksum: 9d48f7efe1ad3146b9c7c0354f26f4e2330cb51082227eb8a0fb7b8bf9dacb15c57b1dec9e43ce59dd8f75c9b86535f39b9d2ce6bf25c4a8528d79dff4cd9b72
-  languageName: node
-  linkType: hard
-
 "@compiled/react@npm:^0.10.4":
   version: 0.10.4
   resolution: "@compiled/react@npm:0.10.4"
@@ -2222,7 +2208,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/plugin@npm:2.3.2, @parcel/plugin@npm:^2.3.2":
+"@parcel/plugin@npm:2.3.2":
   version: 2.3.2
   resolution: "@parcel/plugin@npm:2.3.2"
   dependencies:
@@ -2306,7 +2292,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/source-map@npm:^2.0.0, @parcel/source-map@npm:^2.0.2":
+"@parcel/source-map@npm:^2.0.0":
   version: 2.0.2
   resolution: "@parcel/source-map@npm:2.0.2"
   dependencies:
@@ -2583,6 +2569,26 @@ __metadata:
   checksum: 105e77db7757e6955490bc4551899f5130db373b8d8d15f558859f218138c308928274383f2df65702c51c302e434fbccd632a2a3c413f6d2edcb56c20b1ac82
   languageName: node
   linkType: hard
+
+"@template-frontend-starter/core@workspace:*, @template-frontend-starter/core@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@template-frontend-starter/core@workspace:packages/core"
+  dependencies:
+    "@compiled/react": ^0.10.4
+    react: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@template-frontend-starter/entry@workspace:entry":
+  version: 0.0.0-use.local
+  resolution: "@template-frontend-starter/entry@workspace:entry"
+  dependencies:
+    "@template-frontend-starter/core": "workspace:*"
+    "@testing-library/react": ^12.1.4
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
 
 "@testing-library/dom@npm:^8.0.0, @testing-library/dom@npm:^8.11.1":
   version: 8.11.3
@@ -8670,7 +8676,6 @@ __metadata:
     "@babel/preset-typescript": ^7.16.7
     "@compiled/babel-plugin": ^0.14.0
     "@compiled/eslint-plugin": ^0.3.0
-    "@compiled/parcel-transformer": ^0.7.3
     "@compiled/react": ^0.10.4
     "@parcel/core": ^2.3.2
     "@parcel/validator-typescript": ^2.3.2
