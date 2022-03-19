@@ -1,5 +1,6 @@
 /.parcel-cache/
-/.yarn/
+/.yarn/cache/
+/.yarn/install-state.gz
 /build/
 /coverage/
 /dist/
