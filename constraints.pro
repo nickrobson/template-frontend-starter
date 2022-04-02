@@ -7,6 +7,7 @@ gen_enforced_dependency(WorkspaceCwd, DependencyIdent, null, 'devDependencies') 
 gen_enforced_dependency('.', DependencyIdent, DependencyRange, DependencyType) :-
   % For any given workspace other than the root declaring a dependency
   workspace_has_dependency(WorkspaceCwd, DependencyIdent, DependencyRange, DependencyType),
+  WorkspaceCwd \= '.',
   % And the dependency is not a workspace
   \+ workspace_ident(_, DependencyIdent),
   % And the root does not declare that dependency (with any range)
@@ -16,6 +17,7 @@ gen_enforced_dependency('.', DependencyIdent, DependencyRange, DependencyType) :
 gen_enforced_dependency(WorkspaceCwd, DependencyIdent, RootDependencyRange, DependencyType) :-
   % For any given workspace other than the root declaring a dependency (with some range)
   workspace_has_dependency(WorkspaceCwd, DependencyIdent, PkgDependencyRange, DependencyType),
+  WorkspaceCwd \= '.',
   % And the root package.json declares a different version of the dependency
   workspace_has_dependency('.', DependencyIdent, RootDependencyRange, _),
   PkgDependencyRange \= RootDependencyRange.
@@ -30,12 +32,14 @@ gen_enforced_dependency(WorkspaceCwd, DependencyIdent, 'workspace:*', Dependency
 % Require workspace dependencies to be declared as dependencies in the root
 gen_enforced_dependency('.', DependencyIdent, DependencyRange, 'dependencies') :-
   workspace_has_dependency(WorkspaceCwd, DependencyIdent, DependencyRange, 'dependencies'),
+  WorkspaceCwd \= '.',
   \+ workspace_ident(_, DependencyIdent),
   \+ workspace_has_dependency('.', DependencyIdent, _, 'dependencies').
 
 % Require workspace devDependencies to be declared as dependencies or devDependencies in the root
 gen_enforced_dependency('.', DependencyIdent, DependencyRange, 'devDependencies') :-
   workspace_has_dependency(WorkspaceCwd, DependencyIdent, DependencyRange, 'devDependencies'),
+  WorkspaceCwd \= '.',
   \+ workspace_ident(_, DependencyIdent),
   \+ (
     workspace_has_dependency('.', DependencyIdent, _, 'dependencies') ;
