@@ -1,0 +1,5 @@
+*.json linguist-language=JSON
+*.jsx linguist-language=JavaScript
+*.tsx linguist-language=TypeScript
+
+.yarn/** -linguist-detectable
