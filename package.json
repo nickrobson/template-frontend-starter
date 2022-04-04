@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "rm -rf dist && parcel build",
     "prepare": "husky install",
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint --fix . && prettier --write .",
