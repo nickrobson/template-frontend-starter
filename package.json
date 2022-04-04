@@ -15,7 +15,8 @@
     "start": "parcel",
     "build": "parcel build",
     "prepare": "husky install",
-    "lint": "eslint .",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write .",
     "test": "jest"
   },
   "packageManager": "yarn@3.2.0",
