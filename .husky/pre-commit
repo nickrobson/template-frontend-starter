@@ -1,9 +1,86 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npx lint-staged &
-yarn constraints &
-yarn dedupe --check &
-yarn test --onlyChanged --passWithNoTests &
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+ENDCOLOR="\e[0m"
+
+checksfile="$(mktemp)"
+successfile="$(mktemp)"
+jq -n --arg "total" "0" --arg "completed" "0" '{total: $total|tonumber, completed: $completed|tonumber}' >"${checksfile}"
+get_total_checks_count() {
+    jq '.total' "${checksfile}"
+}
+add_one_check() {
+    echo "$(jq '.total = .total + 1' "${checksfile}")" >"${checksfile}"
+}
+get_completed_checks_count() {
+    jq '.completed' "${checksfile}"
+}
+complete_one_check() {
+    echo "$(jq '.completed = .completed + 1' "${checksfile}")" >"${checksfile}"
+}
+
+report_completed_check() {
+    name="$1"
+    outcome="$2"
+    completion_status="($(get_completed_checks_count)/$(get_total_checks_count) completed)"
+
+    if [ "$outcome" = "pass" ]
+    then
+        printf >&2 "${GREEN}${name} passed. ${completion_status}${ENDCOLOR}\n"
+    else
+        printf >&2 "${RED}${name} failed. ${completion_status}${ENDCOLOR}\n"
+    fi
+}
+
+run_command() {
+    name="$1"
+    cmd="$2"
+    fix="$3"
+
+    set +e
+    output="$($cmd)"
+    exit_code=$?
+    set -e
+
+    complete_one_check
+    if [ $exit_code -eq 0 ]
+    then
+        report_completed_check "${name}" "pass"
+    else
+        rm -f "${successfile}"
+        report_completed_check "${name}" "fail"
+        echo >&2 "$output"
+        if [ "${fix}" ]
+        then
+            printf >&2 "${YELLOW}To fix this, run ${fix}${ENDCOLOR}\n"
+        fi
+    fi
+}
+
+run_check() {
+    add_one_check
+    name="$1"
+    cmd="$2"
+    fix="$3"
+    run_command "${name}" "${cmd}" "${fix}" &
+}
+
+echo "Running pre-commit checks..."
+
+run_check "Dependency duplication check" "yarn dedupe --check" "yarn dedupe"
+run_check "Dependency constraints check" "yarn constraints" "yarn constraints --fix"
+run_check "Code style" "npx lint-staged"
+run_check "Unit tests" "yarn test --onlyChanged --passWithNoTests"
 
 wait
+
+# if successfile exists as a file, no check failed
+if [ -f "${successfile}" ]
+then
+    exit 0
+else
+    exit 1
+fi
