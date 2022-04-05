@@ -2664,6 +2664,7 @@ __metadata:
     "@compiled/react": ^0.10.4
     "@testing-library/react": ^13.0.0
     react: ^18.0.0
+    react-dom: ^18.0.0
   languageName: unknown
   linkType: soft
 
