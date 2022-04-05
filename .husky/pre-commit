@@ -53,7 +53,7 @@ run_command() {
         rm -f "${successfile}"
         report_completed_check "${name}" "fail"
         echo >&2 "$output"
-        if [ "${fix}" ]
+        if [ ! -z "${fix}" ]
         then
             printf >&2 "${YELLOW}To fix this, run ${fix}${ENDCOLOR}\n"
         fi
