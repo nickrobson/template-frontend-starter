@@ -3,6 +3,7 @@
 
 npx lint-staged &
 yarn constraints &
+yarn dedupe --check &
 yarn test --onlyChanged --passWithNoTests &
 
 wait
