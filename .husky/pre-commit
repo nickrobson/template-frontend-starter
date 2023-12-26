@@ -6,9 +6,11 @@ GREEN="\e[32m"
 YELLOW="\e[33m"
 ENDCOLOR="\e[0m"
 
-checksfile="$(mktemp)"
-successfile="$(mktemp)"
-jq -n --arg "total" "0" --arg "completed" "0" '{total: $total|tonumber, completed: $completed|tonumber}' >"${checksfile}"
+reset_state() {
+    checksfile="$(mktemp)"
+    successfile="$(mktemp)"
+    jq -n --arg "total" "0" --arg "completed" "0" '{total: $total|tonumber, completed: $completed|tonumber}' >"${checksfile}"
+}
 get_total_checks_count() {
     jq '.total' "${checksfile}"
 }
@@ -68,19 +70,25 @@ run_check() {
     run_command "${name}" "${cmd}" "${fix}" &
 }
 
-echo "Running pre-commit checks..."
+main() {
+    reset_state
 
-run_check "Dependency duplication check" "yarn dedupe --check" "yarn dedupe"
-run_check "Dependency constraints check" "yarn constraints" "yarn constraints --fix"
-run_check "Code style" "npx lint-staged"
-run_check "Unit tests" "yarn test --onlyChanged --passWithNoTests"
+    echo "Running pre-commit checks..."
 
-wait
+    run_check "Dependency duplication check" "yarn dedupe --check" "yarn dedupe"
+    run_check "Dependency constraints check" "yarn constraints"
+    run_check "Code style" "npx lint-staged"
+    run_check "Unit tests" "yarn test --onlyChanged --passWithNoTests"
 
-# if successfile exists as a file, no check failed
-if [ -f "${successfile}" ]
-then
-    exit 0
-else
-    exit 1
-fi
+    wait
+
+    # if successfile exists as a file, no check failed
+    if [ -f "${successfile}" ]
+    then
+        exit 0
+    else
+        exit 1
+    fi
+}
+
+main

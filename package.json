@@ -9,7 +9,7 @@
   "source": "entry/src/index.html",
   "workspaces": [
     "entry",
-    "packages/**"
+    "packages/*"
   ],
   "scripts": {
     "start": "parcel",
@@ -19,7 +19,7 @@
     "lint:fix": "eslint --fix . && prettier --write .",
     "test": "jest"
   },
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@4.0.2",
   "dependencies": {
     "@compiled/react": "^0.10.4",
     "@swc/helpers": "^0.3.8",
@@ -44,6 +44,7 @@
     "@types/react-dom": "^17.0.14",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
+    "@yarnpkg/types": "^4.0.0",
     "babel-jest": "^27.5.1",
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
