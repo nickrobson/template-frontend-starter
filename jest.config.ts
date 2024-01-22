@@ -46,4 +46,4 @@ export default {
       testMatch: ['<rootDir>/{entry,packages}/**/*.{js,jsx,ts,tsx}'],
     },
   ],
-} /*satisfies import('jest').Config*/;
+} satisfies import('jest').Config;
