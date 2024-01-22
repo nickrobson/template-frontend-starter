@@ -3,7 +3,7 @@
   "name": "@template-frontend-starter/entry",
   "version": "1.0.0",
   "dependencies": {
-    "@template-frontend-starter/core": "workspace:*",
+    "@template-frontend-starter/typography": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

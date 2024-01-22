@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@template-frontend-starter/core",
+  "name": "@template-frontend-starter/typography",
   "version": "1.0.0",
   "main": "src/index.ts",
   "dependencies": {

@@ -1,4 +1,4 @@
-import { Heading } from '@template-frontend-starter/core/src/typography/Heading';
+import { Heading } from '@template-frontend-starter/typography/src/Heading';
 
 export const App = () => {
   return (
