@@ -43,6 +43,8 @@
     }
   },
   "rules": {
-    "import/no-extraneous-dependencies": "error"
+    "@compiled/jsx-pragma": "error",
+    "import/no-extraneous-dependencies": "error",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }]
   }
 }

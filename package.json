@@ -21,7 +21,7 @@
   },
   "packageManager": "yarn@4.0.2",
   "dependencies": {
-    "@compiled/react": "^0.10.4",
+    "@compiled/react": "^0.16.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tslib": "^2.3.1"
@@ -31,8 +31,8 @@
     "@babel/preset-env": "^7.23.8",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
-    "@compiled/babel-plugin": "^0.15.0",
-    "@compiled/eslint-plugin": "^0.4.1",
+    "@compiled/babel-plugin": "^0.28.2",
+    "@compiled/eslint-plugin": "^0.13.5",
     "@parcel/core": "^2.11.0",
     "@parcel/validator-typescript": "^2.11.0",
     "@testing-library/jest-dom": "^5.16.3",
