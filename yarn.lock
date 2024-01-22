@@ -4608,7 +4608,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig@npm:^7.0.0, cosmiconfig@npm:^7.0.1":
+"cosmiconfig@npm:^7.0.1":
   version: 7.1.0
   resolution: "cosmiconfig@npm:7.1.0"
   dependencies:
@@ -4618,27 +4618,6 @@ __metadata:
     path-type: "npm:^4.0.0"
     yaml: "npm:^1.10.0"
   checksum: 03600bb3870c80ed151b7b706b99a1f6d78df8f4bdad9c95485072ea13358ef294b13dd99f9e7bf4cc0b43bcd3599d40df7e648750d21c2f6817ca2cd687e071
-  languageName: node
-  linkType: hard
-
-"create-jest-runner@npm:^0.11.2":
-  version: 0.11.2
-  resolution: "create-jest-runner@npm:0.11.2"
-  dependencies:
-    chalk: "npm:^4.1.0"
-    jest-worker: "npm:^28.0.2"
-    throat: "npm:^6.0.1"
-  peerDependencies:
-    "@jest/test-result": ^28.0.0
-    jest-runner: ^28.0.0
-  peerDependenciesMeta:
-    "@jest/test-result":
-      optional: true
-    jest-runner:
-      optional: true
-  bin:
-    create-jest-runner: generator/index.js
-  checksum: 833d7952edfdf748176d6a2993ccf6e07ce73e3114e67567d9133c1ad6addadd1297eb366fd3d4b23e91aca44c065ca3f80f5acec5f2d34ad54058cbb1efec73
   languageName: node
   linkType: hard
 
@@ -5107,15 +5086,6 @@ __metadata:
     domelementtype: "npm:^2.2.0"
     domhandler: "npm:^4.2.0"
   checksum: 1f316a03f00b09a8893d4a25d297d5cbffd02c564509dede28ef72d5ce38d93f6d61f1de88d439f31b14a1d9b42f587ed711b9e8b1b4d3bf6001399832bfc4e0
-  languageName: node
-  linkType: hard
-
-"dot-prop@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "dot-prop@npm:6.0.1"
-  dependencies:
-    is-obj: "npm:^2.0.0"
-  checksum: 1200a4f6f81151161b8526c37966d60738cf12619b0ed1f55be01bdb55790bf0a5cd1398b8f2c296dcc07d0a7c2dd0e650baf0b069c367e74bb5df2f6603aba0
   languageName: node
   linkType: hard
 
@@ -6623,13 +6593,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-obj@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "is-obj@npm:2.0.0"
-  checksum: c9916ac8f4621962a42f5e80e7ffdb1d79a3fab7456ceaeea394cd9e0858d04f985a9ace45be44433bf605673c8be8810540fe4cc7f4266fc7526ced95af5a08
-  languageName: node
-  linkType: hard
-
 "is-path-inside@npm:^3.0.3":
   version: 3.0.3
   resolution: "is-path-inside@npm:3.0.3"
@@ -7143,21 +7106,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-runner-eslint@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "jest-runner-eslint@npm:2.1.2"
-  dependencies:
-    chalk: "npm:^4.0.0"
-    cosmiconfig: "npm:^7.0.0"
-    create-jest-runner: "npm:^0.11.2"
-    dot-prop: "npm:^6.0.1"
-  peerDependencies:
-    eslint: ^7 || ^8
-    jest: ^27 || ^28 || ^29
-  checksum: a3d2b648bd821fc308cc3d108af4b2c3f363b7b4b63f09f366ac377c6859e270fe6f7e26f5a8f364b03602289262a772280a03023d9f0d56a92ae9c8ad96e8ac
-  languageName: node
-  linkType: hard
-
 "jest-runner@npm:^29.7.0":
   version: 29.7.0
   resolution: "jest-runner@npm:29.7.0"
@@ -7286,17 +7234,6 @@ __metadata:
     jest-util: "npm:^29.7.0"
     string-length: "npm:^4.0.1"
   checksum: 4f616e0345676631a7034b1d94971aaa719f0cd4a6041be2aa299be437ea047afd4fe05c48873b7963f5687a2f6c7cbf51244be8b14e313b97bfe32b1e127e55
-  languageName: node
-  linkType: hard
-
-"jest-worker@npm:^28.0.2":
-  version: 28.1.3
-  resolution: "jest-worker@npm:28.1.3"
-  dependencies:
-    "@types/node": "npm:*"
-    merge-stream: "npm:^2.0.0"
-    supports-color: "npm:^8.0.0"
-  checksum: 0b5992308276ac8440a789e5317ff8feaa496cd9a0512c9cd73dbb9b6d2ff81b717cef1aa20113633c7280c9e29319af00a4d53d6bb35adbd1e3c01f0c290152
   languageName: node
   linkType: hard
 
@@ -10046,7 +9983,6 @@ __metadata:
     husky: "npm:^8.0.3"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
-    jest-runner-eslint: "npm:^2.1.2"
     lint-staged: "npm:^15.2.0"
     node-notifier: "npm:^10.0.1"
     parcel: "npm:^2.11.0"
@@ -10085,13 +10021,6 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 4383b5baaeffa9bb4cda2ac33a4aa2e6d1f8aaf811848bf73513a9b88fd76372dc461f6fd6d2e9cb5100f48b473be32c6f95bd983509b7d92bb4d92c10747452
-  languageName: node
-  linkType: hard
-
-"throat@npm:^6.0.1":
-  version: 6.0.1
-  resolution: "throat@npm:6.0.1"
-  checksum: b4788024c17e2e9c0d5773434fe16b6de98ccfc413ab8ed4ac2230d84a0af724fc12434453c31bf9b032f4c1910b95376d7fc1410786695d26d3bed49cb6ac55
   languageName: node
   linkType: hard
 

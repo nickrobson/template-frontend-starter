@@ -40,10 +40,5 @@ export default {
       coverageDirectory: 'coverage',
       coveragePathIgnorePatterns: ['/node_modules/'],
     },
-    {
-      displayName: 'lint',
-      runner: 'eslint',
-      testMatch: ['<rootDir>/{entry,packages}/**/*.{js,jsx,ts,tsx}'],
-    },
   ],
 } satisfies import('jest').Config;
