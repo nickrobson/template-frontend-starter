@@ -22,7 +22,6 @@
   "packageManager": "yarn@4.0.2",
   "dependencies": {
     "@compiled/react": "^0.10.4",
-    "@swc/helpers": "^0.3.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "tslib": "^2.3.1"
@@ -34,8 +33,8 @@
     "@babel/preset-typescript": "^7.23.3",
     "@compiled/babel-plugin": "^0.15.0",
     "@compiled/eslint-plugin": "^0.4.1",
-    "@parcel/core": "^2.4.1",
-    "@parcel/validator-typescript": "^2.4.1",
+    "@parcel/core": "^2.11.0",
+    "@parcel/validator-typescript": "^2.11.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^13.0.0",
     "@types/jest": "^27.4.1",
@@ -58,8 +57,9 @@
     "jest": "^27.5.1",
     "jest-runner-eslint": "^1.0.0",
     "lint-staged": "^12.3.7",
-    "parcel": "^2.4.1",
+    "parcel": "^2.11.0",
     "prettier": "2.6.2",
+    "process": "^0.11.10",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   },
