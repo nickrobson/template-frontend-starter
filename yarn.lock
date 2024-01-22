@@ -1548,6 +1548,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@compiled/jest@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@compiled/jest@npm:0.10.0"
+  dependencies:
+    css: "npm:^3.0.0"
+  checksum: 6c7e5c54eacfeeee23cd9871b2625ab9802183d04fc387862fc2afab082ff9ada9952b4cd6a56bdc5651d98a45d5dbb3f939fcb6736593b8e58435d59e26a07f
+  languageName: node
+  linkType: hard
+
 "@compiled/react@npm:^0.16.8":
   version: 0.16.8
   resolution: "@compiled/react@npm:0.16.8"
@@ -9882,6 +9891,7 @@ __metadata:
     "@babel/preset-typescript": "npm:^7.23.3"
     "@compiled/babel-plugin": "npm:^0.28.2"
     "@compiled/eslint-plugin": "npm:^0.13.5"
+    "@compiled/jest": "npm:^0.10.0"
     "@compiled/react": "npm:^0.16.8"
     "@parcel/core": "npm:^2.11.0"
     "@parcel/validator-typescript": "npm:^2.11.0"

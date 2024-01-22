@@ -3,9 +3,16 @@ import { Heading } from './Heading';
 
 describe('<Heading />', () => {
   it('should render heading text', () => {
-    const { getByText } = render(<Heading size={3}>heading</Heading>);
+    const { getByRole } = render(<Heading size={3}>My heading</Heading>);
 
-    expect(getByText('heading')).toBeInTheDocument();
+    expect(
+      getByRole('heading', { name: 'My heading', level: 3 })
+    ).toBeInTheDocument();
+  });
+
+  it('should render styled heading', () => {
+    const { getByRole } = render(<Heading size={3}>My heading</Heading>);
+    expect(getByRole('heading')).toHaveCompiledCss({ color: '#30c' });
   });
 
   it.each`

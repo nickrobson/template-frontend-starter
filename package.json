@@ -33,6 +33,7 @@
     "@babel/preset-typescript": "^7.23.3",
     "@compiled/babel-plugin": "^0.28.2",
     "@compiled/eslint-plugin": "^0.13.5",
+    "@compiled/jest": "^0.10.0",
     "@parcel/core": "^2.11.0",
     "@parcel/validator-typescript": "^2.11.0",
     "@testing-library/jest-dom": "^5.16.3",
