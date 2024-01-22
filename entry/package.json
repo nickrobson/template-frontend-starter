@@ -9,5 +9,6 @@
   },
   "devDependencies": {
     "@testing-library/react": "^14.1.2"
-  }
+  },
+  "sideEffects": false
 }

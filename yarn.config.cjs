@@ -110,7 +110,6 @@ module.exports = defineConfig({
   async constraints(ctx) {
     const { Yarn } = ctx;
 
-    const rootWorkspace = Yarn.workspace({ cwd: '.' });
     for (const workspace of Yarn.workspaces()) {
       if (workspace.cwd === '.') {
         // Root workspace is already validated by this point
@@ -118,6 +117,9 @@ module.exports = defineConfig({
       }
 
       checkPackageName(ctx, workspace);
+
+      if (workspace.manifest.sideEffects === undefined)
+        workspace.set('sideEffects', false);
     }
 
     for (const dependency of Yarn.dependencies()) {
