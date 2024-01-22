@@ -7,8 +7,13 @@ export default {
   roots: ['./'],
   slowTestThreshold: 5,
   testLocationInResults: true,
-  timers: 'fake',
+  fakeTimers: {
+    enableGlobally: true,
+  },
   watchman: true,
+
+  collectCoverage: true,
+  coverageProvider: 'v8',
 
   projects: [
     {
@@ -28,14 +33,12 @@ export default {
         '\\.(ts|tsx)$': '<rootDir>/jest-transformer.js',
       },
 
-      collectCoverage: true,
       collectCoverageFrom: [
         '<rootDir>/{entry,packages}/**/*.{js,jsx,ts,tsx}',
         '!**/node_modules/**',
       ],
       coverageDirectory: 'coverage',
       coveragePathIgnorePatterns: ['/node_modules/'],
-      coverageProvider: 'v8',
     },
     {
       displayName: 'lint',
@@ -43,4 +46,4 @@ export default {
       testMatch: ['<rootDir>/{entry,packages}/**/*.{js,jsx,ts,tsx}'],
     },
   ],
-};
+} /*satisfies import('jest').Config*/;
