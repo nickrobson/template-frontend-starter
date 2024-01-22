@@ -79,6 +79,7 @@ main() {
     run_check "Dependency constraints check" "yarn constraints"
     run_check "Code style" "npx lint-staged"
     run_check "Unit tests" "yarn test --onlyChanged --passWithNoTests"
+    run_check "Typecheck" "yarn tsc --noEmit"
 
     wait
 
